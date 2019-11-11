@@ -47082,7 +47082,6 @@ GameObject:
   - component: {fileID: 212652213560646763}
   - component: {fileID: 50959881338650499}
   - component: {fileID: 61346584768372985}
-  - component: {fileID: 1463393174547342}
   m_Layer: 0
   m_Name: HeavyBandit
   m_TagString: Player
@@ -47090,22 +47089,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &1463393174547342
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463393174547341}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.12}
-  serializedVersion: 2
-  m_Radius: 0.09
 --- !u!4 &4532009535584165
 Transform:
   m_ObjectHideFlags: 0
@@ -47170,7 +47153,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.27206546}
+  m_Offset: {x: 0, y: 0.21922651}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -47181,7 +47164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15436345, y: 0.26586908}
+  m_Size: {x: 0.15436345, y: 0.37154698}
   m_EdgeRadius: 0
 --- !u!61 &61751992250124409
 BoxCollider2D:
@@ -47207,7 +47190,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.03}
+  m_Size: {x: 0.105974495, y: 0.03}
   m_EdgeRadius: 0
 --- !u!95 &95734437018502997
 Animator:
@@ -47253,7 +47236,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 2
-  m_jumpForce: 4
+  m_jumpForce: 4.5
+  m_acceleration: 20
 --- !u!212 &212652213560646763
 SpriteRenderer:
   m_ObjectHideFlags: 0
