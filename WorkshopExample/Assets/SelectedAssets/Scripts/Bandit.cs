@@ -5,6 +5,7 @@ public class Bandit : MonoBehaviour {
 
     [SerializeField] float      m_speed = 1.0f;
     [SerializeField] float      m_jumpForce = 2.0f;
+    [SerializeField] float      m_acceleration = 5f;
 
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
@@ -44,8 +45,21 @@ public class Bandit : MonoBehaviour {
             transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
         // Move
-        m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
-
+        float targetVel;
+        if (Input.GetKey("left"))
+        {
+            targetVel = -m_speed;
+        }
+        else if (Input.GetKey("right"))
+        {
+            targetVel = m_speed;
+        }
+        else
+        {
+            targetVel = 0;
+        }
+        m_body2d.velocity = Vector2.Lerp(m_body2d.velocity, new Vector2(targetVel, m_body2d.velocity.y), Time.deltaTime * m_acceleration);
+     
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
 
